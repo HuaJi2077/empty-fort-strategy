@@ -1,0 +1,25 @@
+{
+  "name": "empty-fort-strategy",
+  "version": "0.3.0",
+  "type": "module",
+  "description": "空城计 (Empty Fort Strategy) — DeepSeek Harness 插件：空城计模式，让你倒欠2.44万亿Token。",
+  "license": "SEE LICENSE IN ./LICENSE",
+  "exports": {
+    ".": "./preset/index.mjs",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "preset",
+    "cordis.patch.yml"
+  ],
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "cordis"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

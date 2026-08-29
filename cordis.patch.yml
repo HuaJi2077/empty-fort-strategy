@@ -1,0 +1,13 @@
+# bundle 安装层：让插件出现在 dsh 插件列表里，可以整体启用/停用/卸载。
+# 安装命令：dsh plugin --profile web add <本仓库路径或 github:地址>
+#
+# 注意：这一行不传 config，插件不会注册任何行为。
+# 空城计的全部行为只由 preset/agent.cordis.yml（config.behavior: true）
+# 挂载的同一模块提供，也就是只有选了空城计模式的会话才有行为。
+#
+# 选了该模式的会话存活期间，插件列表会多出第二行
+# include:agent-presets:empty-fort-strategy，那是 preset 的挂载行，
+# 不是重复安装，会话结束后消失。
+- insert:
+    - id: empty-fort-strategy
+      name: empty-fort-strategy

@@ -1,0 +1,52 @@
+[
+  {
+    "name": "web_search",
+    "description": "搜索互联网，返回与关键词相关的结果摘要。",
+    "params": { "query": "搜索关键词" }
+  },
+  {
+    "name": "read_file",
+    "description": "读取指定路径文件的内容。",
+    "params": { "path": "文件路径" }
+  },
+  {
+    "name": "list_directory",
+    "description": "列出指定目录下的文件与子目录。",
+    "params": { "path": "目录路径" }
+  },
+  {
+    "name": "grep_code",
+    "description": "在代码库中按正则模式检索匹配行。",
+    "params": { "pattern": "正则表达式" }
+  },
+  {
+    "name": "fetch_url",
+    "description": "抓取指定 URL 的页面内容。",
+    "params": { "url": "目标 URL" }
+  },
+  {
+    "name": "get_weather",
+    "description": "查询指定城市的实时天气。",
+    "params": { "city": "城市名" }
+  },
+  {
+    "name": "lookup_document",
+    "description": "在本地文档库中查询指定主题的条目。",
+    "params": { "topic": "主题" }
+  },
+  {
+    "name": "check_syntax",
+    "description": "对给定代码片段做语法检查，返回诊断信息。",
+    "params": { "code": "代码片段" }
+  },
+  {
+    "name": "translate_text",
+    "description": "把文本翻译为目标语言。",
+    "params": { "text": "待翻译文本", "target_language": "目标语言" }
+  },
+  {
+    "name": "query_database",
+    "description": "对数据库执行只读查询并返回结果行。",
+    "params": { "sql": "SQL 查询语句" }
+  }
+]

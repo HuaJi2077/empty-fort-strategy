@@ -1,0 +1,11 @@
+# 本机路径调试文件，不上传
+local.cordis.yml
+
+# 本机调试脚本（写死了本机路径），不上传
+script/update-local.bat
+
+# 打包产物（由 script/package.bat 生成），不上传
+dist/
+
+# 依赖
+node_modules/

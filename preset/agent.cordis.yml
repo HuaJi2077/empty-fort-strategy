@@ -1,0 +1,18 @@
+# 空城计模式的 Agent 组合：挂载本目录里的插件，选中该模式的会话生效。
+#
+# 插件（'./index.mjs'）会注册三样东西：
+#   - 假工具（来自同目录 fake-tools.json，每次调用随机取，可重复）
+#   - 行为协议提示词（流程按 scenario.yml 生成：
+#     思考跟着工具调用走，每次调用前思考一轮，多出的思考放结尾）
+#   - 回合收尾处理（预算用完后放行最后一轮思考，回合正常结束；
+#     outputFinal=false 时由插件写入一个换行作为最终输出）
+#
+# 用 .mjs 扩展名的原因：.agent-presets 目录下没有 package.json，
+# .js 会被 Node 当 CommonJS 处理直接报错，.mjs 强制按 ESM 加载。
+#
+# config.behavior: true 打开行为注册。仓库根 cordis.patch.yml 也挂了
+# 这个模块但不传 config——那条只负责出现在插件列表里，不注册行为。
+- id: empty-fort-strategy
+  name: './index.mjs'
+  config:
+    behavior: true
